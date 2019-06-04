@@ -1,0 +1,69 @@
+@import url("https://use.typekit.net/cld2nei.css");
+
+.landing__content {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.322)),
+    url(../Images/landing2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.typing__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 3rem;
+  margin-right: auto;
+  width: 50%;
+  margin-left: 2em;
+}
+.typewriting h1 {
+  font-family: "ff-nexus-typewriter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #aaa;
+}
+.typewriting {
+  margin-bottom: 2em;
+}
+.text {
+  border-right: 2px solid #777;
+}
+.fancy__btn {
+  margin-top: 0.9em;
+  padding: 1rem;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  width: 25%;
+  text-align: center;
+}
+.fancy__btn a {
+  text-decoration: none;
+  color: #ccc;
+}
+.typewriting p {
+  color: #aaa;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1000px) {
+  .typing__content {
+    margin-bottom: 2rem;
+  }
+  .fancy__btn {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .fancy__btn {
+    width: 30%;
+  }
+  .typing__content {
+    margin-bottom: 2rem;
+  }
+}

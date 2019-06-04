@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../normalize/normalize.css" />
+    <link rel="stylesheet" href="../CSS/update.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>Update | SpaceX</title>
+  </head>
+  <body>
+    <div class="live__section">
+      <header>
+        <div class="navbar">
+          <ul class="side__navbar">
+            <i class="fa fa-times" id="close__bar" aria-hidden="true"></i>
+            <li><a href="falcon9.html">Falcon 9</a></li>
+            <li><a href="starlink.html">Starlink</a></li>
+            <li><a href="falconheavy.html">Falcon Heavy</a></li>
+            <li><a href="update.html">Update</a></li>
+          </ul>
+          <div id="open__bar">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+          <div class="logo">
+            <a href="index.html"
+              ><img src="../Images/spaceX logo.png" alt="SpaceX logo"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <!-------- HEADER SECTION ENDS HERE -->
+      <div class="countdown-container">
+        <h1 class="countdown-header">Launch Countdown</h1>
+        <h1 id="countdown">260d. 20h. 30m. 50s</h1>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left is__hidden">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            <li class="carousel__slide current-slide">
+              <img class="carousel__images" src="../Images/new1.jpg" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img class="carousel__images" src="../Images/new2.jpg" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img class="carousel__images" src="../Images/new3.jpg" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img
+                class="carousel__images"
+                src="../Images/rocket4.jpg"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel__nav">
+          <button class="carousel__indicator current-slide"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+          <button class="carousel__indicator"></button>
+        </div>
+      </div>
+
+      <form>
+        <div class="form__header">
+          <h4>Subscribe Now</h4>
+        </div>
+        <p class="error__text"></p>
+        <div class="field__name">
+          <i class="far fa-user"></i>
+          <input type="text" placeholder="Name" required />
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="field__email inactive">
+          <i class="far fa-envelope"></i>
+          <input type="email" placeholder="Email" required />
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="field__finish inactive">
+          <p>Its a launch!!!</p>
+          <i class="fas fa-rocket"></i>
+        </div>
+      </form>
+    </div>
+    <script src="../JavaScript/update.js"></script>
+    <script src="../JavaScript/form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,490 @@
+@import url("https://use.typekit.net/cld2nei.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #181c1f;
+}
+
+/****
+** TYPOGRAPHY
+*****/
+.hero-content h1 {
+  color: #005288;
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+#falcon9-text {
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 0.04em;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+  padding-right: 1em;
+}
+#falconheavy-text {
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 0.04em;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+  padding-right: 1em;
+}
+
+/*** 
+***Navbar Section
+*****/
+.navbar {
+  display: flex;
+  justify-content: left;
+  grid-column: 1/2;
+}
+.logo img {
+  margin-left: auto;
+  width: 250px;
+}
+
+.side__navbar {
+  height: 100%;
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.1s; /* 0.1 second transition effect to slide in the sidenav */
+}
+.side__navbar a {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 8px 8px 32px 32px;
+  color: #005288;
+  margin-top: 1em;
+}
+.side__navbar a:hover {
+  color: #181c1f;
+}
+.side__navbar li {
+  padding-bottom: 1em;
+  margin-top: 2em;
+  position: relative;
+}
+.side__navbar li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #005288;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in-out;
+}
+.side__navbar li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+#open__bar div {
+  background: #005288;
+  cursor: pointer;
+  margin: 5px 0;
+  height: 5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+#open__bar {
+  display: block;
+  margin: 1em 0 0 2em;
+  width: 50px;
+  cursor: pointer;
+}
+.one {
+  width: 50px;
+}
+.two {
+  width: 30px;
+}
+.three {
+  width: 40px;
+}
+#open__bar:hover div {
+  width: 50px;
+}
+#close__bar {
+  font-size: 1.5em;
+  color: #005288;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+/************* FALCON 9 SECTION *************/
+.body-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-section {
+  grid-column: 1/2;
+  margin-left: 3em;
+}
+.second-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 6em 0 0 1em;
+}
+.second-nav ul li i {
+  font-size: 1.5em;
+  color: #fff;
+  padding-left: 1em;
+}
+.second-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.second-nav ul li i:hover {
+  color: #005288;
+}
+.second-nav ul li a:hover {
+  color: #005288;
+}
+
+#falcon9-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 1.5em;
+  background: #005288;
+  border-radius: 50px;
+  line-height: 28px;
+}
+#falcon9-btn:hover {
+  color: #fff !important;
+  border-color: #005288 !important;
+  transition: all 0.3s ease 0s;
+}
+.hero-content {
+  padding-left: 1em;
+}
+#play-btn {
+  margin-left: 1em;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: rgb(0, 82, 136);
+  text-align: center;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0px rgba(0, 82, 136, 0.2);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(0, 82, 136, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 82, 136, 0.2);
+  }
+}
+.hero-btn {
+  display: flex;
+}
+.playbtn-video {
+  grid-column: 2/3;
+  z-index: 1;
+  grid-row: 2/3;
+  display: none;
+}
+
+/************* MIDDEL SECTION *************/
+
+.hero-image {
+  background: url(../Images/falcon9.png);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/************* ROCKET SPECIFIC SECTION *************/
+
+.third-section {
+  grid-column: 3/4;
+  grid-row: -1/3;
+  border-left: 2px solid #005288;
+}
+.rocket-title {
+  color: #005288;
+  font-size: 2em;
+}
+.rocket-spec {
+  margin: 6em 0 0 4em;
+}
+.spec-list {
+  list-style: none;
+  margin-top: 1em;
+  align-items: center;
+}
+.spec-list li {
+  padding: 2em;
+  color: #fff;
+  font-size: 1.2em;
+}
+.spec-list p {
+  color: #005288;
+  place-content: center;
+}
+.follow-icons ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.follow-icons ul li i {
+  font-size: 1.5em;
+  color: #005288;
+  margin-right: 1em;
+  transition: 0.3s;
+}
+.follow-icons ul li i:hover {
+  color: #fff;
+}
+.follow {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  border-bottom: 2px solid #005288;
+}
+.follow p {
+  font-size: 1.5em;
+  color: #005288;
+}
+
+/************* MEDIA QUERIES SECTION ************
+
+/****
+*** FALCON-9 SECTION
+****/
+@media screen and (max-width: 950px) {
+  #falcon9-text span {
+    display: none;
+  }
+  .body-section {
+    grid-template-rows: 100px;
+  }
+  .third-section {
+    grid-column: 3/4;
+    grid-row: -2/3;
+  }
+  .rocket-spec {
+    margin-top: 4em;
+  }
+}
+@media screen and (max-width: 860px) {
+  .follow p {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+  }
+  .hero-image {
+    height: 65vh;
+  }
+}
+@media screen and (max-width: 850px) {
+  #falcon9-btn {
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .follow p {
+    font-size: 1em;
+    margin-right: 0.5em;
+  }
+  .follow-icons ul li i {
+    font-size: 1em;
+  }
+  .rocket-title {
+    font-size: 1.1em;
+    margin-right: 1em;
+    display: inline-block;
+  }
+  .spec-list li {
+    font-size: 0.9em;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 375px) {
+  .body-section {
+    grid-template-rows: 100px 300px 300px 200px;
+  }
+  .hero-image {
+    grid-row: 2/3;
+    height: auto;
+    grid-column: 1/4;
+  }
+  .third-section {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-section {
+    grid-row: 4/6;
+    grid-column: 1/4;
+    margin-top: 2em;
+  }
+  .follow {
+    display: none;
+  }
+  .spec-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 50px;
+    width: 100%;
+    padding-right: 4em;
+  }
+  .col-1 li {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .col-1 p {
+    grid-column: 1/2;
+  }
+  .col-2 li {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .col-2 p {
+  }
+  .col-3 li {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .col-3 p {
+    grid-column: 1/2;
+  }
+  .col-4 li {
+    grid-column: 2/3;
+    grid-row: -1;
+  }
+  .col-4 p {
+  }
+  .rocket-spec {
+    place-content: center;
+  }
+  .rocket-title {
+    margin-right: 4em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .body-section {
+    grid-template-rows: 100px 300px 300px 200px;
+  }
+  .hero-image {
+    grid-row: 2/3;
+    height: auto;
+    grid-column: 1/4;
+  }
+  .third-section {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-section {
+    grid-row: 4/6;
+    grid-column: 1/4;
+    margin-top: 2em;
+  }
+  .follow {
+    display: none;
+  }
+  .spec-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px 50px;
+    width: 100%;
+    padding-right: 4em;
+  }
+  .col-1 li {
+  }
+  .col-1 p {
+    grid-column: 1/2;
+  }
+  .col-2 li {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .col-2 p {
+  }
+  .col-3 li {
+  }
+  .col-3 p {
+    grid-column: 1/2;
+  }
+  .col-4 li {
+    grid-column: 2/3;
+
+    grid-row: 3/4;
+  }
+  .col-4 p {
+  }
+  .rocket-spec {
+    place-content: center;
+  }
+  .rocket-title {
+    margin-right: 4em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #countdown {
+    font-size: 36px;
+  }
+  .live-video {
+    width: 80%;
+  }
+  .carousel__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 688px) {
+  .countdown-header {
+    font-size: 1.9em;
+  }
+  .live-video {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .countdown-header {
+    font-size: 1em;
+  }
+  #countdown {
+    font-size: 20px;
+  }
+  .live-video {
+    width: 100%;
+  }
+  .carousel__container {
+    width: 100%;
+    margin: auto;
+  }
+}

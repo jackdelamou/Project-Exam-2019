@@ -1,0 +1,46 @@
+form {
+  position: relative;
+  display: flex;
+}
+.field-name,
+.field-email,
+.field-finish {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  height: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.field-name i,
+.field-email i,
+.field-finish i {
+  padding: 20px;
+  cursor: pointer;
+}
+.field-name input,
+.field-email input,
+.field-finish input {
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+}
+div.innactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+}
+div.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}

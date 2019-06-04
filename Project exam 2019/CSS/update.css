@@ -1,0 +1,282 @@
+@import url("https://use.typekit.net/cld2nei.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #181c1f;
+}
+
+/*** 
+***Navbar Section
+*****/
+.navbar {
+  display: flex;
+  justify-content: left;
+  grid-column: 1/2;
+}
+.logo img {
+  margin-left: auto;
+  width: 250px;
+}
+
+.side__navbar {
+  height: 100%;
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.1s; /* 0.1 second transition effect to slide in the sidenav */
+}
+.side__navbar a {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 8px 8px 32px 32px;
+  color: #181c1f;
+  margin-top: 1em;
+  transition: transform 0.2s ease-in;
+}
+.side__navbar a:hover {
+  color: #005288;
+  transform: scale(1.2);
+}
+.side__navbar li {
+  padding-bottom: 1em;
+  margin-top: 2em;
+  position: relative;
+}
+.side__navbar li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #005288;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in-out;
+}
+.side__navbar li:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+#open__bar div {
+  background: #005288;
+  cursor: pointer;
+  margin: 5px 0;
+  height: 5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+#open__bar {
+  display: block;
+  margin: 1em 0 0 2em;
+  width: 50px;
+  cursor: pointer;
+}
+.one {
+  width: 50px;
+}
+.two {
+  width: 30px;
+}
+.three {
+  width: 40px;
+}
+#open__bar:hover div {
+  width: 50px;
+}
+#close__bar {
+  font-size: 1.5em;
+  color: #005288;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+/***
+ COUNTDOWN
+**/
+.countdown-container {
+  width: 60%;
+  margin: 0 auto;
+}
+#countdown {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  font-weight: 300;
+}
+.countdown-header {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding-top: 0.5em;
+  color: #005288;
+}
+
+/***
+  CAROUSEL SLIDER
+***/
+
+.carousel {
+  position: relative;
+  height: 500px;
+  width: 80%;
+  margin: 4em auto 0 auto;
+}
+.carousel__images {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.carousel__track-container {
+  background: lightcoral;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__track {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 300ms ease-in;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.carousel__button--left {
+  left: -25px;
+}
+.carousel__button--right {
+  right: -25px;
+}
+.carousel__button i {
+  font-size: 2em;
+  color: #005288;
+}
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background: #005288;
+}
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  margin: 0 8px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+.is__hidden {
+  display: none;
+}
+
+/***
+  FORM
+**/
+
+.form__header {
+  margin: 0 auto;
+  width: 50%;
+  align-content: center;
+  padding-bottom: 10em;
+  display: flex;
+  justify-content: center;
+}
+.form__header h4 {
+  font-family: "interstate-compressed", sans-serif;
+  font-size: 2em;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+form {
+  position: relative;
+  margin-top: 10em;
+  display: flex;
+}
+.field__name,
+.field__email,
+.field__finish {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.field__name i,
+.field__email i,
+.field__finish i {
+  padding: 10px;
+  cursor: pointer;
+  color: #005288;
+}
+.field__email input,
+.field__name input,
+.field__finish input {
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+}
+div.inactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%);
+}
+div.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
