@@ -25,7 +25,6 @@
   font-weight: 700;
   font-style: normal;
   color: #aaa;
-  margin-bottom: 0.8em;
 }
 .typewriting {
   margin-bottom: 2em;
@@ -54,6 +53,7 @@
 }
 .fancy__btn:hover {
   padding-right: 24px;
+  padding-left: 8px;
 }
 .fancy__btn:hover::after {
   opacity: 1;
@@ -84,12 +84,59 @@
 
 @media screen and (max-width: 920px) {
   .typing {
-    min-height: 100px;
+    font-size: 1.5em;
+  }
+  .typewriting p {
+    line-height: 1.6rem;
   }
   .fancy__btn {
     min-width: 30%;
   }
   .typing__content {
     margin-bottom: 2rem;
+  }
+}
+
+/***
+  PAD VERSION
+**/
+@media screen and (max-width: 768px) {
+  .typing__content {
+    margin-right: auto;
+    width: 55%;
+  }
+}
+@media screen and (max-width: 730px) {
+  .typewriting p {
+    line-height: 1.4rem;
+  }
+  .typing__content {
+    margin-right: auto;
+    width: 65%;
+  }
+  .fancy__btn {
+    min-width: 30%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .typing__content {
+    margin-right: auto;
+    width: 70%;
+  }
+}
+
+/***
+  MOBIL VERSION
+**/
+@media screen and (max-width: 500px) {
+  .typing__content {
+    margin: auto;
+    width: 100%;
+  }
+  .typing {
+    font-size: 1.2em;
+  }
+  .fancy__btn {
+    width: 40%;
   }
 }

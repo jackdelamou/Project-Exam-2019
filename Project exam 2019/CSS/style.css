@@ -333,6 +333,7 @@ body {
 @media screen and (max-width: 375px) {
   .body-section {
     grid-template-rows: 100px 300px 300px 200px;
+    height: 100%;
   }
   .hero-image {
     grid-row: 2/3;
@@ -412,7 +413,7 @@ body {
   .hero-section {
     grid-row: 4/6;
     grid-column: 1/4;
-    margin-top: 2em;
+    margin-top: 5em;
   }
   .follow {
     display: none;
