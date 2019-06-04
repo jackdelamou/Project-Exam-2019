@@ -25,6 +25,7 @@
   font-weight: 700;
   font-style: normal;
   color: #aaa;
+  margin-bottom: 0.8em;
 }
 .typewriting {
   margin-bottom: 2em;
@@ -39,6 +40,24 @@
   border: 2px solid #ccc;
   width: 25%;
   text-align: center;
+  position: relative;
+}
+.fancy__btn::after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+  font-size: 20px;
+  color: white;
+}
+.fancy__btn:hover {
+  padding-right: 24px;
+}
+.fancy__btn:hover::after {
+  opacity: 1;
+  right: 10px;
 }
 .fancy__btn a {
   text-decoration: none;
@@ -50,6 +69,10 @@
   letter-spacing: 1px;
 }
 
+.typing {
+  min-height: 77px;
+}
+
 @media screen and (min-width: 1000px) {
   .typing__content {
     margin-bottom: 2rem;
@@ -59,9 +82,12 @@
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 920px) {
+  .typing {
+    min-height: 100px;
+  }
   .fancy__btn {
-    width: 30%;
+    min-width: 30%;
   }
   .typing__content {
     margin-bottom: 2rem;
