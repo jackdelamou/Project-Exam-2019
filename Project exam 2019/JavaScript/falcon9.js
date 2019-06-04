@@ -26,3 +26,23 @@ window.addEventListener("load", () => {
         data[21].rocket.second_stage.payloads[0].payload_mass_kg + " kg";
     });
 });
+
+const playButton = document.getElementById("play-btn");
+console.log(playButton);
+const falconVideo = document.querySelector(".playbtn-video iframe");
+console.log(falconVideo);
+const heroImage = document.querySelector(".hero-image");
+
+playButton.addEventListener("click", () => {
+  if ((falconVideo.style.display = "none")) {
+    falconVideo.style.display = "block";
+    heroImage.style.display = "none";
+  }
+});
+
+document.body.addEventListener("click", () => {
+  if ((falconVideo.style.display = "block")) {
+    falconVideo.style.display = "none";
+    heroImage.style.display = "block";
+  }
+});

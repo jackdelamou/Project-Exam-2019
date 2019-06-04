@@ -48,6 +48,7 @@ function animatedForm() {
 function validateUser(user) {
   if (user.value.length < 6) {
     console.log("not good");
+    error("red");
   } else {
     return true;
   }
@@ -59,7 +60,7 @@ function validateEmail(email) {
   if (validation.test(email.value)) {
     return true;
   } else {
-    error();
+    error("red");
     return false;
   }
 }
@@ -72,8 +73,8 @@ const nextFormSlide = (parent, nextForm) => {
 };
 
 //Error function
-function error() {
-  document.querySelector(".error__text").textContent = "Email is wrong";
+function error(color) {
+  document.querySelectorAll(".error").style.backgroundColor = "color";
 }
 
 animatedForm();
