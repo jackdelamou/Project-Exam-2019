@@ -20,5 +20,7 @@ window.addEventListener("load", () => {
       rocketName.textContent = rocket_name;
       rocketType.textContent = rocket_type;
       launchYear.textContent = data[76].launch_year;
+      rocketWeight.textContent =
+        data[76].rocket.second_stage.payloads[0].payload_mass_kg + " kg";
     });
 });

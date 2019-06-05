@@ -1,4 +1,4 @@
-//
+//Navigation bar
 const openNav = document.getElementById("open__bar");
 const closeNav = document.getElementById("close__bar");
 
@@ -21,6 +21,7 @@ closeNav.addEventListener("click", () => {
   }
 });
 
+//Form Validation og Animation
 function animatedForm() {
   const arrows = document.querySelectorAll(".fa-arrow-down");
 

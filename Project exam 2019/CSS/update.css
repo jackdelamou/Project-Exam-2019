@@ -188,16 +188,25 @@ body {
 }
 .carousel__indicator {
   border: 0;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  padding: 1em 2em;
   background: #fff;
   margin: 0 8px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(255, 255, 255);
   cursor: pointer;
+}
+.carousel__indicator--1,
+.carousel__indicator--2,
+.carousel__indicator--3,
+.carousel__indicator--4,
+.carousel__indicator--5,
+.carousel__indicator--6,
+.carousel__indicator--7,
+.carousel__indicator--0 {
+  color: #005288;
 }
 .carousel__indicator.current-slide {
   background: rgba(0, 0, 0, 0.75);
+  color: #fff;
 }
 .is__hidden {
   display: none;
@@ -299,9 +308,6 @@ div.active {
   }
   .countdown-header {
     font-size: 1.5em;
-  }
-  #countdown {
-    font-size: 1.9em;
   }
 }
 /* FOR IPAD SCREEN */
